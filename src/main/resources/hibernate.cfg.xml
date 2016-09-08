@@ -5,8 +5,8 @@
 
 <hibernate-configuration>
     <session-factory>
-        <mapping class="net.contactmanager.domain.Contact" />
-        <mapping class="net.contactmanager.domain.User" />
-        <mapping class="net.contactmanager.domain.UserRoles" />
+        <mapping class="net.project.domain.Contact" />
+        <mapping class="net.project.domain.User" />
+        <mapping class="net.project.domain.UserRoles" />
     </session-factory>
 </hibernate-configuration>

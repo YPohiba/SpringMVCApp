@@ -49,7 +49,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="D:\GitHub\SpringMVCApp\target/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="TestSpringSecurMVCHibernate/web/Web" />
     </root>

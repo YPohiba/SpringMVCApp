@@ -13,14 +13,14 @@
 
   <title>Welcome</title>
 
-  <link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet">
+  <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
   <link href="<c:url value="/resources/css/jumbotron-narrow.css" />" rel="stylesheet">
 
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-  <![endif]-->
+
 </head>
-<body class="navbar">
+<body>
 
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
@@ -41,22 +41,20 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-xs-5">
-    </div>
-      <div class="col-xs-10">
-        <h2 class="text-left" style="color: cornflowerblue">Hello info!${message}</h2>
-      </div>
-    <div class="col-xs-5">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-2">
-    </div>
-      <div class="col-xs-8">
+  <div class="container">
+    <div class="jumbotron" style="margin-top: auto;">
 
-      </div>
-    <div class="col-xs-2">
+      <form action="/getAllUsers" method="POST">
+        <button class="btn btn-lg btn-primary btn-success" type="submit">Get all users</button>
+      </form>
+
+      <%--@elvariable id="userList" type="java.util.Map"--%>
+      <c:if test="${!empty userList}">
+        <c:forEach items="${userList}" var="user">
+          <h5>Name: ${user.username} eMail:${user.email}</h5>
+        </c:forEach>
+      </c:if>
+
     </div>
   </div>
 
